@@ -4,6 +4,7 @@ League of legends (LoL) is a MOBA created by Riot Games and highly competitive, 
 Data:
 - Obtained from Kaggle: https://www.kaggle.com/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min/data?select=high_diamond_ranked_10min.csv
 - Data is about DIAMOND-MASTER ranked matches before 10 mins
+- Data is from 2020 during league season 10
 
 Glossary/Key terminology (from Kaggle)
 - Warding totem: An item that a player can put on the map to reveal the nearby area. Very useful for map/objectives control.
