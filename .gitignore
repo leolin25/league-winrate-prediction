@@ -1,0 +1,23 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python / Jupyter artifacts
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Data files (keep raw/processed out of commit history)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Large serialized models
+models/*
+!models/.gitkeep
+
+# OS / Editor artifacts
+.DS_Store
+.vscode/
