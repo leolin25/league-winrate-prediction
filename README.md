@@ -16,8 +16,9 @@ Glossary/Key terminology (from Kaggle)
 - Towers: Structures you have to destroy to reach the enemy Nexus. They give gold.
 - Level: Champion level. Start at 1. Max is 18 (when data was posted on Kaggle)
 
-
 Files:
 - eda.ipynb: This file documents the eda process of the project, I used this file to visualise intresting data and also document discoveries I made about the data
 - features.py: Python file for feature engineering
 - model.py: Python file containing the model for the project
+
+How to use:
