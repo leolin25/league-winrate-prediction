@@ -4,6 +4,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, log_loss, roc_auc_score
+import joblib
 
 # function to create a pipeline for the data and train the model
 def train_model(X_train: pd.DataFrame, y_train: pd.Series) -> Pipeline:
@@ -27,3 +28,12 @@ def evaluate_model(model: Pipeline, X_test: pd.DataFrame, y_test: pd.DataFrame) 
     }
 
     return metrics
+
+# save model in disc
+def save_model(model: Pipeline, filepath: str='models/baseline.joblib') -> None:
+    joblib.dump(model, filepath)
+    print(f'Model saved to {filepath}')
+
+# load the model from disc
+def load_model(filepath: str='models/baseline.joblib') -> Pipeline:
+    return joblib.load(filepath)
