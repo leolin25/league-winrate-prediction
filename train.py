@@ -16,6 +16,7 @@ def main():
     optimal_features = [
         'gold_diff', 
         'xp_diff', 
+        'kill_diff',
         'cs_diff', 
         'objective_diff',
         'first_blood',

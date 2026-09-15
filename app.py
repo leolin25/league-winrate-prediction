@@ -17,10 +17,11 @@ model = joblib.load('models/baseline.joblib')
 # sidebar for user to fill in stats
 st.sidebar.header('Match State at 10 mins (Blue)')
 
-# continuous differentials
+# slider differentials
 gold_diff = st.sidebar.slider('Gold Differential', min_value=-5000, max_value=5000, value=0, step=100)
 xp_diff = st.sidebar.slider('XP Differential', min_value=-5000, max_value=5000, value=0, step=100)
 cs_diff = st.sidebar.slider('CS Differential', min_value=-50, max_value=50, value=0, step=1)
+kill_diff = st.sidebar.slider('Kill Differential', min_value=-50, max_value=50, value=0, step=1)
 
 # discrete differentials
 st.sidebar.subheader('Objectives')
@@ -38,7 +39,8 @@ else:
 
 input_data = pd.DataFrame({
     'gold_diff': [gold_diff],
-    'xp_diff': [xp_diff],
+    'xp_diff': [xp_diff],   
+    'kill_diff': [kill_diff],
     'cs_diff': [cs_diff],
     'objective_diff': [objective_diff],
     'first_blood': [first_blood_int],

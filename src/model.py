@@ -4,13 +4,14 @@ from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, log_loss, roc_auc_score
+from sklearn.ensemble import RandomForestClassifier
 import joblib
 
 # function to create a pipeline for the data and train the model
 def train_model(X_train: pd.DataFrame, y_train: pd.Series) -> Pipeline:
     pipeline = Pipeline([
         ('scalar', StandardScaler()),
-        ('classifier', LogisticRegression(max_iter=1000, random_state=42))
+        ('classifier', RandomForestClassifier(n_estimators=100, max_depth=5, random_state=42))
     ])
 
     pipeline.fit(X_train, y_train)
